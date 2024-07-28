@@ -1,0 +1,28 @@
+
+#inptStar{
+    display: none;
+}
+
+#txtBxFeedback{
+    background-color: rgb(241, 253, 246);
+    border: none;
+    border-radius: 15px;
+    /* box-shadow: 5px 5px 5px 5px rgb(196, 195, 195) */
+}
+
+.innrBckgrnd{
+    width: 60%;
+    align-items: center;
+}
+
+.inner{
+    text-align: center;
+    margin: 6%;
+        width: auto;
+            display: inline-block;
+}
+
+.outer{
+    display: inline-block;
+    text-align: center;
+}

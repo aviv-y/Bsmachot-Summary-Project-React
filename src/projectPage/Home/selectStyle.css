@@ -1,0 +1,25 @@
+.nameCmpny{
+    position: fixed;
+}
+.innerBU{
+    width:80% !important;
+    position: absolute;
+    height: 600px !important;
+} 
+.crslBU {
+    position: absolute;
+}
+.subProfession{
+    display: contents;
+}
+/* .row{
+    margin-top: 50px;
+} */
+.dtlsBU{
+    text-align: right;
+}
+
+.css-qc6sy-singleValue{
+    color: rgb(182, 182, 182) !important;
+
+}

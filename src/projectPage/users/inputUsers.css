@@ -1,0 +1,184 @@
+
+.outer {
+ min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: sans-serif;
+  /*רקע לסוגי דפדפנים שונים*/
+  /* background: #12c2e9;  
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  */
+  background-image: url("https://www.webconcepts.co.il/uploads/s/siteadmin/97e2f377f3~.jpg")!important; 
+  background-repeat: no-repeat;   /*ללא חזרה*/
+  background-attachment: fixed;   /*לא זז בגלילה*/
+  background-position: center;  /*ממורכז*/
+  background-size: cover;  /*עמוד מלא*/
+  overflow:hidden; 
+  position: relative; 
+  
+}
+
+.lblField{
+  direction: rtl;
+    color: rgb(182, 179, 179) !important;
+    text-align: right;
+    width: 100%;
+}
+
+  #react-select-5-listbox{
+    /* display:inline-block !important; */
+    /* overflow: scroll !important; */
+    /* width: 100%; */
+    position:absolute;
+    margin-bottom: -100px;
+  }
+  /* .css-2613qy-menu{
+    position:fixed;
+    display:inline-block !important;
+    overflow: scroll !important;
+    color: red;
+    background-color: aqua;
+  } */
+.css-1s2u09g-control {
+  background-color: rgb(13, 14, 14) !important;
+  border: rgb(10, 10, 10);
+  text-align: right;
+  border: 0 !important;
+  margin-top: 4%;
+  font-family: inherit;
+  width: 100%;
+  outline: 0;
+  color: rgb(182, 179, 179) !important;
+  border-bottom: 2px solid rgb(182, 179, 179) !important;
+}
+.css-tlfecz-indicatorContainer,
+.css-319lph-ValueContainer {
+  background-color: rgb(13, 14, 14);
+  border: rgb(10, 10, 10);
+  text-align: right;
+  border: 0 !important;
+  color: rgb(182, 179, 179) !important;
+}
+/*כפתור בחירת סוג משתמש*/
+.swchUserBtn {
+  left: 0 !important;
+  margin-left: 1%;
+  align-items: left;
+  position: fixed;
+}
+/*כרטיס הפרטים*/
+.inner {
+  background-color: black;
+  opacity: 0.9;
+  color: rgb(195, 190, 190);
+  overflow: auto;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;
+  position: relative;
+  width: auto !important;
+  height: auto !important;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.inner::-webkit-scrollbar {
+  display: none;
+}
+
+/*קלאס שדה*/
+/*עיצוב שדה במקרה של אי-אימות*/
+.fieldErr {
+  margin-top: 4%;
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  border-bottom: 2px solid rgb(241, 83, 83);
+  color: rgb(207, 211, 215)
+}
+/*עיצוב שדה במקרה של אימות*/
+.fieldOk {
+  margin-top: 4%;
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  border-bottom: 2px solid rgb(54, 156, 22);
+  color: rgb(212, 213, 214);
+}
+
+.athorityField {
+  margin-top: 4%;
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  border-bottom: 2px solid rgb(182, 179, 179);
+  color: rgb(212, 213, 214);
+}
+
+/*תמונת פרופיל-לייבל*/
+.lblPrfl {
+  align-items: center;
+  justify-items: center;
+}
+#pImg {
+  height: 25px;
+  justify-items: right;
+  cursor: pointer;
+}
+#upPrfl {
+  display: none;
+}
+#inptL {
+  direction: rtl;
+}
+
+/*כפתור שליחה*/
+#signBtn {
+  margin-top: 4%;
+  background-color: rgb(22, 12, 12);
+  border: 0;
+}
+#signBtn:hover {
+  background-color: rgb(124, 72, 72);
+  color: rgb(124, 72, 72);
+  background: transparent;
+}
+
+/*login*/
+#tblQ {
+  width: 100%;
+  font-style: normal;
+}
+/*שאלת חשבון*/
+#acntQ {
+  display: inline;
+  text-align: left;
+  font-style: normal;
+  justify-items: left;
+}
+/*שאלת שכחת סיסמא*/
+#pswrdQ {
+  display: inline;
+  text-align: right !important;
+  justify-content: right;
+  direction: rtl;
+  /* margin-left: 43%; */
+}
+@media print {
+  .outer {
+    background-image: url("http: //www.mikoo.co.il/cdn/shop/products/DelicateBlackFlower1_1200x1200.jpg?v=1611272956");
+  }
+
+  /* .inner{
+    display: flex;
+  } */
+}

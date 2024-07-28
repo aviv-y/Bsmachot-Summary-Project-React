@@ -1,0 +1,64 @@
+.imgSign{
+    background-color: aliceblue;
+    width: auto;
+    height: 50px;
+}
+
+#bodyCntrct{
+    text-align: right;
+}
+
+
+.oneLine {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Align items vertically in the center */
+}
+
+.txtCntrct {
+    margin: 0;
+    /* Remove default margin for <p> elements */
+    /* Add any other styles for your paragraphs */
+}
+#sendBtn{
+    width: 100%;
+    margin-top: 3%;
+}
+
+
+/* Add any additional styling for your other elements */
+
+.littleInpt{
+    width: 130px;
+}
+
+.NISInpt {
+    width: 80px;
+    /* Adjust the width as needed */
+}
+
+.inpt{
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid gray ;
+    color: rgb(202, 202, 202);
+}
+
+.inner{
+    margin-top: 7%;
+}
+
+.btnSign{
+    margin: 0.5%;
+    border: none;
+}
+
+
+#btnMess{
+    background-color: rgb(77, 133, 253);
+}
+
+#signPad{
+    display: inline-block;
+}

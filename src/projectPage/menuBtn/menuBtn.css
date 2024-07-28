@@ -1,0 +1,22 @@
+.mnuBtnIcn {
+  width: 35px;
+  cursor: pointer;
+}
+.drpdnBtn {
+  border: none;
+  background-color: white;
+  margin-left: 3%;
+}
+
+.hmIcnMnu {
+  position: flex;
+}
+
+.drpdnItm {
+  text-align: left;
+}
+
+.lnkMenuBtn {
+  text-decoration: none;
+  color: rgb(159, 128, 161);
+}

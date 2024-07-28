@@ -1,0 +1,22 @@
+#cont{
+    width:100%;
+}
+#nameCl{
+    background-color: rgb(244, 208, 255);
+    left: 0;
+    top:0;
+    bottom: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons{
+    width: 15px;
+}
+
+#imgProf{
+    border-radius: 50%;
+    width:50%;
+    height: 80%;
+}

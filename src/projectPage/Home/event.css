@@ -1,0 +1,30 @@
+.eventP{
+    display: flex !important;
+    padding: 70px;
+    overflow: initial;
+}
+
+.eventC{
+    display: inline-block;
+    margin: 3px !important;
+    overflow: unset;
+    width: 100%;
+    max-inline-size: min-content;
+}
+.btnNotCss{
+    all:unset;
+}
+.outer{
+    overflow: auto;
+}
+/* #topRow{
+    margin-top: 120px;
+} */
+
+#wasEvent{
+    /* font-size: 80px; */
+        /* color: #fff; */
+        text-align: center;
+        /* animation: glow 1s ease-in-out infinite alternate; */
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+}

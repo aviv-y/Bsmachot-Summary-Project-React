@@ -1,0 +1,57 @@
+/* #all{
+    position: relative;
+    
+} */
+body, html, #root{
+    background: white;
+}
+
+a{
+      text-decoration: none;
+
+}
+
+.hmImgCrsl{
+    right:inherit;
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    margin-bottom: 25%;
+    overflow: hidden;
+}
+
+
+.lblHmMnu{
+    display:flex;
+    color:rgb(78, 78, 78);
+    background-color: white;
+    border: none;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lblHmMnu:hover{
+    color:rgb(159, 128, 161);
+      transition: 0.5s;
+      
+
+}
+.btnHmMnu{
+    border:0px;
+    background-color: white;
+}
+
+.lnkHmMnu{
+        align-items: center;
+        justify-content: center !important;
+          text-decoration: none;
+          text-align: center;
+
+}
+
+#rowMnu{
+    width: 100%;
+}

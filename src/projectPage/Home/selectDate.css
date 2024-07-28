@@ -1,0 +1,26 @@
+.calender {
+  color: rgb(241, 83, 83);
+}
+.react-calendar button {
+  color: white;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: rgb(241, 83, 83) !important;
+}
+.react-calendar {
+  background-color: black;
+  opacity: 0.8;
+  border: 0px;
+}
+
+.react-calendar__tile:disabled,
+.react-calendar__navigation button:disabled {
+  background-color: #888585;
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+/* סיכום אירוע */
+#eventSmry{
+  text-align: center;
+}

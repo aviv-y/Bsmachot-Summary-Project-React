@@ -1,0 +1,97 @@
+.messBox{
+   width: 500px;
+  border: 0;
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  border-bottom: 2px solid rgb(182, 179, 179);
+  color: rgb(212, 213, 214);
+}
+.sendIcn {
+  /*סיבוב של האייקון בכל הדפדפנים*/
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+/**/
+  
+}
+.icons{
+  cursor: pointer;
+  margin: auto;
+  margin-left: 5%;
+}
+
+/*טקסט הסבר*/
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.icons:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.messLbl{
+  background-color: #555;
+  color:black;
+  padding: 3%;
+  border-radius:10px;
+}
+
+.timeLbl{
+  direction: rtl;
+  font-size: small;
+  font-style: italic;
+}
+
+.containL{
+  width: 100%;
+  direction: ltr !important;
+  text-align: left;
+}
+
+.containR{
+  width: 100%;
+  direction: rtl !important;
+  text-align: right;
+}
+
+.pu{
+  background-color:rgb(85, 55, 45);
+  border-radius: 25px 25px 25px 0;
+display: grid;
+}
+.bu{
+  background-color:rgb(156, 154, 154);
+  color: black;
+  border-radius: 25px 0 25px 25px;
+display: grid;
+}
+
+.inner{
+  margin-bottom: 6%;
+}
+
+.writeMess{
+  width: 100%;
+}
+.writeMess >.outer{
+  all:unset
+}
+.writeMess>.outer>.inner {
+  all:unset
+}
+
+.writeMess>.outer>.inner>form>span>#origin{
+  display: none;
+}
