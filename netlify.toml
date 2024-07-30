@@ -1,6 +1,9 @@
 [build]
-  command = "npm install --force && npm run build --force "
+  command = "NODE_OPTIONS='--max-old-space-size=4096' npm install --legacy-peer-deps && npm run build"
   publish = "build"
-
+  environment = { NPM_FLAGS = "--max-old-space-size=4096" }
 [context.production.environment]
   NODE_ENV = "production"
+[plugins]
+  [[plugins]]
+    package = "@netlify/plugin-lighthouse"
