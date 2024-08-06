@@ -6,23 +6,13 @@ import SignUp from "./SignUp";
 import RequestResetPassword from "./ReqResetPassword";
 import ResetPassword from "./ResetPassword";
 import "./inputUsers.css";
-import { connect } from "react-redux";
 import { setBtnNavB } from "../redux/actions/inputs.action";
+import { connect } from "react-redux";
 
-
-
-/**
- * זהו דף הבסיס של כניסה ורישום למשתמש פרטי
- * כאן כתוב קוד הסרגל העליון של הדף, ופה מוכלות הקומפוננטות של רישום וכניסה המוצגות לפי ראוטר המופעל ע"י כפתורי הסרגל
- */
 function HomeUsers(props) {
-  
-  // useEffect(() => { //הגדרת לקוח פרטי בברירת מחדל בטעינת הקומפוננטה  
-  //   sessionStorage.setItem("user type", 0);
-  //   console.log("יוזאפקט");
-  //   props.changeBtnNavB(1);
-  //   },[])
-
+  useEffect(() => {
+    props.changeBtnNavB(1);
+  }, []);
 
   return (
     <>
@@ -31,10 +21,7 @@ function HomeUsers(props) {
           <div className="inner">
             <Switch>
               <Route path="/Login" component={Login} />
-              <Route
-                path="/CommentMess"
-                component={Login}
-              />
+              <Route path="/CommentMess" component={Login} />
               {!sessionStorage.getItem("user") && (
                 <Route path="/Sign-Up" component={SignUp} />
               )}
@@ -48,13 +35,7 @@ function HomeUsers(props) {
     </>
   );
 }
-export default connect(
-       (state) => {
-        return{
-            btnNavB: state.btnNavB,
-        };
-    },
-	{
-        changeBtnNavB: setBtnNavB,
-    }
-)(HomeUsers)
+
+export default connect(null, {
+  changeBtnNavB: setBtnNavB,
+})(HomeUsers);
