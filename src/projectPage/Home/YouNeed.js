@@ -67,9 +67,10 @@ function YouNeed(props) {
                     img={item.img}
                     id={item.id}
                     isClose={
-                      sessionStorage.getItem("profs")?.indexOf(item.category)>=0
+                      sessionStorage.getItem("profs")?.indexOf(item.category) >=
+                      0
                         ? 1
-                        : 0
+                        : ""
                     }
                   ></CategoryCard>
                 </Link>
