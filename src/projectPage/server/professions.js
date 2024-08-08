@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function showAllProfession() {
-  return axios.get(`${process.env.REACT_APP_API_URL}/showAllProfession`);
+  return axios.post(`${process.env.REACT_APP_API_URL}/showAllProfession`);
 }
 export function showSubsProfession(idProf) {
   return axios.post(`${process.env.REACT_APP_API_URL}/showSubProfession`, {
