@@ -19,12 +19,11 @@ import { sendReminder } from './projectPage/server/event';
 import BaseContract from './projectPage/Home/Contracts/BaseContract';
 import MyMess from "./projectPage/Home/ContactUs/MyMess";
 import ShowEvents from './projectPage/Home/MyEvent';
-import getImages from './projectPage/uploadImg/getImages';
 import SignClient from './projectPage/Home/Contracts/SignClient';
 import GiveFeedback from "./projectPage/Home/GiveFeedback";
 import WriteFeedback from './projectPage/Home/WriteFeedback';
 import MyContracts from './projectPage/Home/MyContracts';
-import { useHistory } from "react-router-dom";
+import About from './projectPage/Home/About';
 
 
 function App(props) {
@@ -60,6 +59,7 @@ function App(props) {
     : props.changeUserStts(0);
   return (
     <>
+      <About/>
       <Navbar dir="ltr" className="hmIcnMnu" fixed="top">
         {userStatus && <MenuBtn />}
         <div dir="rtl" className="container">
