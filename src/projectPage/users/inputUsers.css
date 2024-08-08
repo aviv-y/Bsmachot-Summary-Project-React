@@ -123,6 +123,7 @@
   transition: border-color 0.2s;
   border-bottom: 2px solid rgb(182, 179, 179);
   color: rgb(212, 213, 214);
+  text-shadow: 0.5px 1px 0px #aca8a8;
 }
 
 /*תמונת פרופיל-לייבל*/
