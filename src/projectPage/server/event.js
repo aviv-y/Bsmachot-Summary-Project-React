@@ -9,7 +9,7 @@ export function showCity() {
 
 //אירוע חדש
 export function newEvent(event) {
-    let ans=axios.post('http://localhost:4000/newEvent', event)
+    let ans=axios.post(`${process.env.REACT_APP_API_URL}/newEvent`, event)
         .then(res => {
             // console.log("react success create new event!! ", res);
             // console.log(res.status);
@@ -20,7 +20,7 @@ export function newEvent(event) {
 }
 
 export function sendMess(txt) {
-    let ans=axios.post('http://localhost:4000/sendMess', txt)
+    let ans=axios.post(`${process.env.REACT_APP_API_URL}/sendMess`, txt)
         .then(res => {
             console.log("react success send message!! ", res);
             console.log(res.status);
@@ -31,7 +31,7 @@ export function sendMess(txt) {
 }
 
 export function showMess(tkn) {
-    let ans = axios.post('http://localhost:4000/showMess',{tkn})
+    let ans = axios.post(`${process.env.REACT_APP_API_URL}/showMess`,{tkn})
         .then(res => { return res })
         .catch(err => console.log("error in show mess! ", err))
     return ans;
@@ -39,7 +39,7 @@ export function showMess(tkn) {
 
 export async function showChatR(user) {
      let ans = await axios
-      .post("http://localhost:4000/showChatR",  user )
+      .post(`${process.env.REACT_APP_API_URL}/showChatR`,  user )
         .then((res) => {
           console.log(res)
         return res;
@@ -50,7 +50,7 @@ export async function showChatR(user) {
 
 export async function showEvents(user) {
      let ans = await axios
-       .post("http://localhost:4000/showEvents", { user })
+       .post(`${process.env.REACT_APP_API_URL}/showEvents`, { user })
        .then((res) => {
          console.log(res);
          return res;
@@ -62,7 +62,7 @@ export async function showEvents(user) {
 
 export async function sendAttachment(blob) {
      let ans = await axios
-       .post("http://localhost:4000/sendAttachment",  blob )
+       .post(`${process.env.REACT_APP_API_URL}/sendAttachment`,  blob )
        .then((res) => {
          console.log(res);
          return res;
@@ -73,7 +73,7 @@ export async function sendAttachment(blob) {
 
 export async function showEventById(idEvent) {
      let ans = await axios
-       .post("http://localhost:4000/showEventById", idEvent)
+       .post(`${process.env.REACT_APP_API_URL}/showEventById`, idEvent)
        .then((res) => {
          console.log(res);
          return res;
@@ -84,7 +84,7 @@ export async function showEventById(idEvent) {
 
 export async function SendForClientsSignature(detailesContract) {
   let ans = await axios
-    .post("http://localhost:4000/showEventById", detailesContract)
+    .post(`${process.env.REACT_APP_API_URL}/showEventById`, detailesContract)
     .then((res) => {
       console.log(res);
       return res;
@@ -95,7 +95,7 @@ export async function SendForClientsSignature(detailesContract) {
 
 export async function showContract(tkn) {
   let ans = await axios
-    .post("http://localhost:4000/showContract", tkn)
+    .post(`${process.env.REACT_APP_API_URL}/showContract`, tkn)
     .then((res) => {
       console.log(res);
       return res;
@@ -106,7 +106,7 @@ export async function showContract(tkn) {
 
 export async function updateContract(pdf) {
   let ans = await axios
-    .post("http://localhost:4000/updateContract", pdf)
+    .post(`${process.env.REACT_APP_API_URL}/updateContract`, pdf)
     .then((res) => {
       console.log(res);
       return res;
@@ -117,7 +117,7 @@ export async function updateContract(pdf) {
 
 export async function updateEvent(eventD) {
   let ans = await axios
-    .post("http://localhost:4000/updateEvent", eventD)
+    .post(`${process.env.REACT_APP_API_URL}/updateEvent`, eventD)
     .then((res) => {
       console.log(res);
       return res;
@@ -128,7 +128,7 @@ export async function updateEvent(eventD) {
 
 export async function showContractByIdEvent(eventID) {
   let ans = await axios
-    .post("http://localhost:4000/showContractByIdEvent", eventID)
+    .post(`${process.env.REACT_APP_API_URL}/showContractByIdEvent`, eventID)
     .then((res) => {
       console.log(res);
       return res;
@@ -139,7 +139,7 @@ export async function showContractByIdEvent(eventID) {
 
 export async function sendReminder() {
   let ans = await axios
-    .post("http://localhost:4000/sendReminder")
+    .post(`${process.env.REACT_APP_API_URL}/sendReminder`)
     .then((res) => {
       console.log(res);
       return res;
@@ -152,7 +152,7 @@ export async function sendReminder() {
 export async function sendFeedbackOnBU(remarkD) {
   console.log(remarkD);
   let ans = await axios
-    .post("http://localhost:4000/addRemark", remarkD)
+    .post(`${process.env.REACT_APP_API_URL}/addRemark`, remarkD)
     .then((res) => {
       console.log(res);
       return res;
@@ -163,7 +163,7 @@ export async function sendFeedbackOnBU(remarkD) {
 
 export async function showAllContracts(user) {
   let ans = await axios
-    .post("http://localhost:4000/showAllContracts", user)
+    .post(`${process.env.REACT_APP_API_URL}/showAllContracts`, user)
     .then((res) => {
       console.log(res);
       return res;

@@ -1,22 +1,26 @@
 import axios from "axios";
 
 export function signUpPUser(pUser) {
-  let ans = axios.post("http://localhost:4000/signUpPUser", pUser).then(
-    (res) => {
-      console.log("react success sign-up pUser!! ", res);
-      console.log(res.status);
-      return res;
-    },
-    (err) => {
-      console.log("react filed... " + err);
-    }
-  );
+  let ans = axios
+    .post(`${process.env.REACT_APP_API_URL}/signUpPUser`, pUser)
+    .then(
+      (res) => {
+        console.log("react success sign-up pUser!! ", res);
+        console.log(res.status);
+        return res;
+      },
+      (err) => {
+        console.log("react filed... " + err);
+      }
+    );
   return ans;
 }
 
 export function loginPUser(pUser) {
+  console.log(process.env.REACT_APP_API_URL);
+
   let ans = axios
-    .post("https://bsmahot-summary-project.vercel.app/routers/api/loginPUser", pUser)
+    .post(`${process.env.REACT_APP_API_URL}/loginPUser`, pUser)
     .then(
       (res) => {
         console.log("react success login pUser!! ", res);
@@ -31,7 +35,7 @@ export function loginPUser(pUser) {
 
 export function reqResetPass(mailpUser) {
   let ans = axios
-    .post("http://localhost:4000/reqResetPass", mailpUser)
+    .post(`${process.env.REACT_APP_API_URL}/reqResetPass`, mailpUser)
     .then(
       (res) => {
         console.log("react success send request reset pass!! " + res);
@@ -47,7 +51,7 @@ export function reqResetPass(mailpUser) {
 
 export function resetPass(pUDetails) {
   let ans = axios
-    .post("http://localhost:4000/resetPass", pUDetails)
+    .post(`${process.env.REACT_APP_API_URL}/resetPass`, pUDetails)
     .then(
       (res) => {
         console.log("react success reset pass!! ", res);
@@ -62,27 +66,31 @@ export function resetPass(pUDetails) {
 }
 
 export function showPUser(pUDetails) {
-  let ans = axios.post("http://localhost:4000/showPUser", pUDetails).then(
-    (res) => {
-      console.log("react success reset pass!! " + res);
-      return res;
-    },
-    (err) => {
-      console.log("react filed... " + err);
-    }
-  );
+  let ans = axios
+    .post(`${process.env.REACT_APP_API_URL}/showPUser`, pUDetails)
+    .then(
+      (res) => {
+        console.log("react success reset pass!! " + res);
+        return res;
+      },
+      (err) => {
+        console.log("react filed... " + err);
+      }
+    );
   return ans;
 }
 
 export function updatePUser(pUDetails) {
-  let ans = axios.post("http://localhost:4000/updatePUser", pUDetails).then(
-    (res) => {
-      console.log("react success reset pass!! " + res);
-      return res;
-    },
-    (err) => {
-      console.log("react filed update user... " + err);
-    }
-  );
+  let ans = axios
+    .post(`${process.env.REACT_APP_API_URL}/updatePUser`, pUDetails)
+    .then(
+      (res) => {
+        console.log("react success reset pass!! " + res);
+        return res;
+      },
+      (err) => {
+        console.log("react filed update user... " + err);
+      }
+    );
   return ans;
 }
