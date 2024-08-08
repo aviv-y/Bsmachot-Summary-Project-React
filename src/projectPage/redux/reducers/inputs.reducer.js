@@ -1,21 +1,20 @@
 
 const initialState = {
-  url: '',
-  inptName: 0, //מצב שדה שם
-  inptPass: 0, //מצב שדה סיסמא
-  inptPhon: 0, //מצב שדה טלפון
-  inptMail: 0, //מצב שדה מייל
-  userType: 0, //האם זה לקוח פרטי או עסקי
-  typeProf: 0, //מצב שדה סוג מקצוע
+  url: "",
+  inptName: null, //מצב שדה שם
+  inptPass: null, //מצב שדה סיסמא
+  inptPhon: null, //מצב שדה טלפון
+  inptMail: null, //מצב שדה מייל
+  userType: null, //האם זה לקוח פרטי או עסקי
+  typeProf: null, //מצב שדה סוג מקצוע
   userStatus: 0, //משתמש מחובר או לא
   btnNavB: 1, //כפתור תפריט
   area: "",
   city: [],
   profSelect: "", //מצב בחירת מקצוע
   bUSelect: {}, //מצב בחירת איש מקצוע
-  img: '',
-  userData: {}
-
+  img: "",
+  userData: {},
 };
 
 export function reducer(state=initialState, action) {

@@ -23,8 +23,8 @@ function Login(props){
     const { inptPass, inptMail, userType, text, link, url} = props;
         
     useEffect(() => {
-        props.changeInptMail(0);
-        props.changeInptPass(0);  
+        props.changeInptMail(null);
+        props.changeInptPass(null);  
     },[])
     
 
@@ -49,8 +49,8 @@ function Login(props){
                     if (respons.mess!="success") {//למה הוא לא נותן לי לשים את זה בחוץ ולהמנע מרי-קוד
                         alert("נתוני הכניסה אינם תואמים");
                         console.log(respons);
-                        props.changeInptMail(0);
-                        props.changeInptPass(0);
+                        props.changeInptMail(null);
+                        props.changeInptPass(null);
                         passwordRef.current.value=""; 
                         mailRef.current.value="";
                     }
@@ -58,9 +58,9 @@ function Login(props){
                         sessionStorage.setItem('user', respons.id);
                         sessionStorage.setItem('status connect user', 1);
                         sessionStorage.setItem('user name', respons.name);
-                        props.changeInptMail(0);
-                        props.changeInptPass(0);
-                        props.changeBtnNavB(0);
+                        props.changeInptMail(null);
+                        props.changeInptPass(null);
+                        props.changeBtnNavB(null);
                         console.log(url);
                         const imgs = await getImages(
                           sessionStorage.getItem("user"),
@@ -83,8 +83,8 @@ function Login(props){
                         alert("נתוני הכניסה אינם תואמים");
                         console.log("opppppsss");
                         console.log(respons);
-                        props.changeInptMail(0);
-                        props.changeInptPass(0);
+                        props.changeInptMail(null);
+                        props.changeInptPass(null);
                         passwordRef.current.value=""; 
                         mailRef.current.value="";
                     }
@@ -93,8 +93,8 @@ function Login(props){
                         sessionStorage.setItem('status connect user', 1);
                         sessionStorage.setItem('user name', respons.name);
                         props.changeUserStts(1);
-                        props.changeInptMail(0);
-                        props.changeInptPass(0);
+                        props.changeInptMail(null);
+                        props.changeInptPass(null);
                         const imgs = await getImages(
                           sessionStorage.getItem("user"),
                           1
@@ -129,11 +129,11 @@ function Login(props){
         switch (e.target.name) {
              case "mail":
                     if(validRgxField.mail.test(mail)) props.changeInptMail(1)
-                    else props.changeInptMail(0)
+                    else props.changeInptMail(null)
                 break;
             case "password":
                     if(validRgxField.pass.test(pass)) props.changeInptPass(1)
-                    else props.changeInptPass(0)
+                    else props.changeInptPass(null)
                 break;
             default: console.log("default case");
         }

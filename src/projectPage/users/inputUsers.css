@@ -95,7 +95,8 @@
   background: transparent;
   transition: border-color 0.2s;
   border-bottom: 2px solid rgb(241, 83, 83);
-  color: rgb(207, 211, 215)
+  color: rgb(207, 211, 215);
+    text-shadow: 0.5px 1px 0px #aca8a8;
 }
 /*עיצוב שדה במקרה של אימות*/
 .fieldOk {

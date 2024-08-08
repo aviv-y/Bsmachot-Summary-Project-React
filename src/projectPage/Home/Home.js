@@ -18,7 +18,7 @@ import WriteFeedback from './WriteFeedback';
 function Home(props) {
 
     useEffect(() => {  
-        props.changeBtnNavB(0);
+        props.changeBtnNavB(null);
     },[])
 
     let isHome;
