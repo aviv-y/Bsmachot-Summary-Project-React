@@ -55,39 +55,48 @@ export default function WriteFeedback() {
     useEffect(() => {
       console.log("Updated state:", bUserClosed);
     }, [bUserClosed]);
-  const [writeRmrk, setWriteRmrk] = useState(0);
-    const history = useHistory();
-    const writeRemarkBtn = (pUser) => {
-      console.log(pUser);
-      setWriteRmrk(pUser)
-        // history.push(`/GetFeedback?user=${id}`)
-    }
+  const [writeRmrk, setWriteRmrk] = useState(null);
+  const history = useHistory();
+  const writeRemarkBtn = (pUser) => {
+    console.log(pUser);
+    setWriteRmrk(pUser);
+  };
   return (
     <>
       <div className="outer">
         <>
-          {!writeRmrk && <>
-            {bUserClosed.length == 0 &&
-              <div className="inner">
-                <h2>הפעם לא סגרת דרכנו חוזה עם אחד המומחים שלנו</h2>
-                <h4>מחכים לכם באירועים הבאים!</h4>
-                <h5>ושתמיד יהיה רק בשמחות!</h5>
-              </div>}
-            {bUserClosed.length > 0 && <>
-              {bUserClosed.map((item) => {
-                return (<div className="inner cardBU">
-                  <h5>{item.company}</h5>
-                  <p>{item.name}</p>
-                  <p>{item.profession}</p>
-                  <Button onClick={() => writeRemarkBtn(item)}>כתוב תגובה</Button>
-                </div>)
-              })}
-            </>}
-          </>}
-          {writeRmrk != 0 && <GiveFeedback bUserDtls={writeRmrk} setEnd={ setWriteRmrk} />}
-              </>
+          {!writeRmrk && (
+            <>
+              {bUserClosed.length == 0 && (
+                <div className="inner">
+                  <h2>הפעם לא סגרת דרכנו חוזה עם אחד המומחים שלנו</h2>
+                  <h4>מחכים לכם באירועים הבאים!</h4>
+                  <h5>ושתמיד יהיה רק בשמחות!</h5>
+                </div>
+              )}
+              {bUserClosed.length > 0 && (
+                <>
+                  {bUserClosed.map((item) => {
+                    return (
+                      <div className="inner cardBU">
+                        <h5>{item.company}</h5>
+                        <p>{item.name}</p>
+                        <p>{item.profession}</p>
+                        <Button onClick={() => writeRemarkBtn(item)}>
+                          כתוב תגובה
+                        </Button>
+                      </div>
+                    );
+                  })}
+                </>
+              )}
+            </>
+          )}
+          {writeRmrk && (
+            <GiveFeedback bUserDtls={writeRmrk} setEnd={setWriteRmrk} />
+          )}
+        </>
       </div>
-      
     </>
   );
 }

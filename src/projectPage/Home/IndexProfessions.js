@@ -47,7 +47,7 @@ function IndexProfesions(props) {
               console.log(item.name);
               return (
                 <>
-                  <tr>
+                  <tr className="bUserLine">
                     <Link to={"./HomeBUser"} onClick={() => selectProf(item)}>
                       <td className="name">{item.name}</td>
                       

@@ -22,7 +22,7 @@ function HomeBUser(props) {
   const { bUSelect } = props;
   const [images, setImages] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(null);
 
   useEffect(() => {
     const fetchImages = async () => {

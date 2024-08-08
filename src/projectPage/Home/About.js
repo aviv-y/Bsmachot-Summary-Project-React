@@ -15,7 +15,7 @@ const About = () => {
   if (!showModal) return null; // אם המודאל מוסתר, לא מציג אותו
 
   return (
-    <div className="modal">
+    <div className="about-modal">
       <div className="modal-content">
               <h2>ברוכים הבאים לאתר "בשמחות"!</h2>
               <h4>יש לכם אירוע בקרוב?</h4>

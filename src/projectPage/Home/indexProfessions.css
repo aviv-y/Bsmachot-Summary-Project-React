@@ -17,4 +17,11 @@ th, td, .name{
 a{
     all: unset;
 }
-
+.bUserLine{
+    background: unset;
+    padding: 1px;
+    cursor: pointer;
+}
+.table>:not(caption)>*>*{
+    background-color: #fff0;
+}

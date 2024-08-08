@@ -13,7 +13,7 @@ import {
   setBtnNavB,
 } from "./projectPage/redux/actions/inputs.action";
 import ContactUs from './projectPage/Home/ContactUs/ContactUs';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import YouNeed from './projectPage/Home/YouNeed';
 import { sendReminder } from './projectPage/server/event';
 import BaseContract from './projectPage/Home/Contracts/BaseContract';
@@ -24,17 +24,24 @@ import GiveFeedback from "./projectPage/Home/GiveFeedback";
 import WriteFeedback from './projectPage/Home/WriteFeedback';
 import MyContracts from './projectPage/Home/MyContracts';
 import About from './projectPage/Home/About';
+import { useLocation } from 'react-router-dom';
 
 
 function App(props) {
   const { userType, userStatus, btnNavB, changeURL, setBtnNavB } = props;
-
+  const[ isHome, setIsHome]=useState(null)
+const location = useLocation();
   useEffect(() => {
     console.log(window.location.href);
     const fullUrl = window.location.href;
     const url = new URL(fullUrl);
     const pathAndQuery = url.pathname + url.search;
     sessionStorage.setItem("url", pathAndQuery);
+      if (location.pathname == "/" || location.pathname == "/Home") {
+        setIsHome(1);
+      } else {
+        setIsHome(null);
+      }
   }, []);
 
   const sMSttsUser = () => {
@@ -59,7 +66,7 @@ function App(props) {
     : props.changeUserStts(0);
   return (
     <>
-      <About/>
+      {!userStatus && isHome && <About />}
       <Navbar dir="ltr" className="hmIcnMnu" fixed="top">
         {userStatus && <MenuBtn />}
         <div dir="rtl" className="container">
