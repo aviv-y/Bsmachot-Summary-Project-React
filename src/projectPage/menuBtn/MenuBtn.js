@@ -22,6 +22,7 @@ export default function MenuBtn(){
   const userSTLink = () => {
     if (sessionStorage.getItem("user")) {
       sessionStorage.clear();
+      window.location.reload();
   }
     history.push("./Login");
 

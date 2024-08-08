@@ -337,7 +337,7 @@ function FullDetailsInputs(props) {
         value={mail.txt}
       />
 
-      {(props.userType || sessionStorage.getItem('user type')) && (
+      {(props.userType || sessionStorage.getItem("user type")) && (
         <div>
           <Form.Control // שם חברה
             name="nameCmpny"
@@ -358,6 +358,7 @@ function FullDetailsInputs(props) {
                 // value={prof}
                 clearable={true}
                 options={profs}
+                className="athorityField"
               />
 
               {profSelect && (
@@ -372,12 +373,13 @@ function FullDetailsInputs(props) {
                     components={makeAnimated()}
                     isMulti
                     options={subProfs}
+                    className="athorityField"
                   />
                 </div>
               )}
             </>
           )}
-          <SelectAreaCity city={city} area={area} />
+          <SelectAreaCity city={city} area={area} className="athorityField" />
           <Form.Control //אודות
             name="about"
             className="athorityField"
